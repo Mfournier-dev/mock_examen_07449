@@ -20,10 +20,10 @@ namespace mock_examen_07449.DataAccess.Dtos
         [Required]
         public int ActorId { get; set; }
 
-        [ForeignKey("MovieID")]
+        [ForeignKey("MovieId")]
         public MovieDTO Movie { get; set; }
 
-        [ForeignKey("ActorID")]
+        [ForeignKey("ActorId")]
         public ActorDTO Actor { get; set; }
 
 

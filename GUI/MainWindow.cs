@@ -104,6 +104,7 @@ namespace mock_examen_07449.GUI
             this.txtMovieTitle.Text = movie.Title;
             this.txtMovieDescription.Text = movie.Description;
             this.dtpMovieReleasedDate.Value = movie.ReleasedDate;
+            this.lstMovieActorList.Items.Clear();
             List<ActorDTO> actors = MainService.GetInstance().GetMovieActorService().GetAllActorsForMovie(movie.Id);
             foreach (ActorDTO actor in actors) {
                 this.AddActorToListView(actor);
@@ -118,7 +119,6 @@ namespace mock_examen_07449.GUI
             this.dtpMovieReleasedDate.Value = DateTime.Now;
             this.lstMovieActorList.Items.Clear();
 
-            //List<ActorDTO> actors = MainService.GetInstance().GetMovieActorService().GetAllActorsForMovie(actors.Id);
 
         }
 
@@ -136,7 +136,7 @@ namespace mock_examen_07449.GUI
             { 
                 if(((int) lstItem.Tag) == actor.Id) {  
                 lstItem.Tag = actor.Id;
-                this.lstMovieActorList.Items.Add(lstItem);
+                this.lstMovieActorList.Items.Remove(lstItem);
                 }
             }
         }
