@@ -66,6 +66,7 @@ namespace mock_examen_07449.GUI
                 
                 }
                 this.actorSelectModal.OpenModal(actorsNotInMovie);
+
                 if (this.actorSelectModal.DialogResult == DialogResult.OK) { 
                     ActorDTO selectedActor = this.actorSelectModal.GetSelectedActor();
                     MainService.GetInstance().GetMovieActorService().CreateNewMovieActorsLink(this.currentSelectedMovie.Id, selectedActor.Id);
@@ -117,7 +118,7 @@ namespace mock_examen_07449.GUI
             this.dtpMovieReleasedDate.Value = DateTime.Now;
             this.lstMovieActorList.Items.Clear();
 
-            //List<ActorDTO> actors = MainService.GetInstance().GetMovieActorService().GetAllActorsForMovie(movie.Id);
+            //List<ActorDTO> actors = MainService.GetInstance().GetMovieActorService().GetAllActorsForMovie(actors.Id);
 
         }
 

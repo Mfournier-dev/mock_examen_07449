@@ -18,7 +18,7 @@ namespace mock_examen_07449.GUI
         {
             InitializeComponent();
             this.cbActorSelector.DisplayMember = "ProfessionalName";
-            this.cbActorSelector.DisplayMember = "Id";
+            this.cbActorSelector.ValueMember = "Id";
         }
 
         public void OpenModal(List<ActorDTO> actors) {
